@@ -1,3 +1,6 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class PBL_1 {
@@ -39,13 +42,29 @@ public class PBL_1 {
                         fibonacci(y);
                         break;
                     case 3:
-                        System.out.println("Under Construction 3");
+                        FileReader fr = new FileReader("input.txt");
+                        BufferedReader br = new BufferedReader(fr);
+                        int z;
+                        while((z = br.read())!=-1) {
+                            z = Character.getNumericValue(z);
+                            fibonacci(z);
+                        }
+                        br.close();
+                        fr.close();
                         break;
                     case 4:
-                        System.out.println("Under Construction 4");
+                        InputStreamReader r = new InputStreamReader(System.in);  
+                        BufferedReader isr = new BufferedReader(r);  
+                        System.out.print("Enter no. of elements: ");
+                        String elements = isr.readLine();
+                        int ele = Integer.parseInt(elements);
+                        fibonacci(ele);
                         break;
                     case 5:
-                        System.out.println("Under Construction 5");
+                        System.out.print("Enter no. of elements: ");
+                        String number = System.console().readLine();
+                        int num = Integer.parseInt(number);
+                        fibonacci(num);
                         break;
                     default:
                         System.out.println("Invalid Input");
