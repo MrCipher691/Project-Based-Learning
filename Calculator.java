@@ -60,8 +60,8 @@ public class Calculator {
         for (float x : nargs)
             mean += x;
         mean /= n;
-        for (float x : nargs)
-            numer += Math.pow((x - mean), 2);
+        for (int i = 0; i < n; i++)
+            numer += Math.pow((nargs[i] - mean), 2);
         return numer/(n - 1);
     }
 }

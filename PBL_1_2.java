@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PBL_2 extends Calculator {
+public class PBL_1_2 extends Calculator {
     static float[] getInput(int n) {
         Scanner sc = new Scanner(System.console().reader());
         float[] num = new float[10];

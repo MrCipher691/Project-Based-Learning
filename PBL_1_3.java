@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PBL_2_2 {
+public class PBL_1_3 {
     static float eculid (float a, float b) {
         if (b==0)
             return a;
