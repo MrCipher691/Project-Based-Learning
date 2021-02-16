@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class PBL_2 {
@@ -32,6 +33,13 @@ public class PBL_2 {
         return arr;
     }
 
+    static void arrayList (float[] arr) {
+        ArrayList <Float> arrli = new ArrayList<Float>(arr.length);
+        for (int i = 0; i < arr.length; i++)
+            arrli.add(arr[i]);
+        System.out.println("Array -> ArrayList: " + arrli);
+    }
+
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
         int ch, cond = 1;
@@ -39,6 +47,7 @@ public class PBL_2 {
             System.out.println("| ----- MENU ----- |");
             System.out.println("1 - Odd/Even Assigner");
             System.out.println("2 - Find Second Smallest Element in an Array");
+            System.out.println("3 - Convert Array to Array List");
             System.out.print("Enter Choice: ");
             ch = sc.nextInt();
             switch (ch) {
@@ -80,6 +89,12 @@ public class PBL_2 {
                     float[] sort = dataEntry(cnt);
                     sort = sorter(sort);
                     System.out.println("Second smallest element of array is " + sort[1]);
+                case 3:
+                    System.out.print("Enter no. of number: ");
+                    cnt = sc.nextInt();
+                    float[] conv = dataEntry(cnt);
+                    arrayList(conv);
+                    break;
                 default:
                     break;
             }
