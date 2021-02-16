@@ -1,6 +1,4 @@
 import java.util.ArrayList;
-import java.util.Dictionary;
-import java.util.Hashtable;
 import java.util.Scanner;
 
 public class PBL_2 {
@@ -42,16 +40,6 @@ public class PBL_2 {
         System.out.println("Array -> ArrayList: " + arrli);
     }
 
-    static float[] common (float[] arr1, float[] arr2, float [] arr3) {
-        float[] length = new float[3];
-        length[0] = arr1.length;
-        length[1] = arr2.length;
-        length[2] = arr3.length;
-        System.out.println("Length of common array = " + (int)sorter(length)[0]);
-        float[] comm = new float[(int)sorter(length)[0]];
-        return comm;
-    }
-
     public static void main (String[] args) {
         Scanner sc = new Scanner(System.in);
         int ch, cond = 1;
@@ -61,7 +49,6 @@ public class PBL_2 {
             System.out.println("2 - Find Second Smallest Element in an Array");
             System.out.println("3 - Convert Array to Array List");
             System.out.println("4 - Convert Array List to Array");
-            //System.out.println("5 - Find Common Elemets from 3 Arrays");
             System.out.print("Enter Choice: ");
             ch = sc.nextInt();
             switch (ch) {
