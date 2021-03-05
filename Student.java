@@ -1,4 +1,3 @@
-import java.util.Comparator;
 import java.util.Scanner;
 
 class DOB {
@@ -19,21 +18,21 @@ class DOB {
     }
 
     public String printDOB() {
-        return (date + "/" + month  + "/" + year);
+        return (date + "/" + month + "/" + year);
     }
 }
 
 class Marks {
-    double pbl;
-    double ds;
-    double os;
-    double em3;
+    int pbl;
+    int ds;
+    int os;
+    int em3;
 
     Marks() {
-        pbl = ds = os = em3 = 0.0;
+        pbl = ds = os = em3 = 0;
     }
 
-    Marks(double pbl, double ds, double os, double em3) {
+    Marks(int pbl, int ds, int os, int em3) {
         this.pbl = pbl;
         this.ds = ds;
         this.os = os;
@@ -41,17 +40,17 @@ class Marks {
     }
 
     public String grader() {
-        if(pbl<0 || pbl>100 || ds<0 || ds>100 || os<0 || os>100 || em3<0 || em3>100)
+        if (pbl < 0 || pbl > 100 || ds < 0 || ds > 100 || os < 0 || os > 100 || em3 < 0 || em3 > 100)
             return "Invalid Value Entered";
         else {
-            double total = ((pbl + ds + os + em3)/400)*100;
-            if(total<=100 && total>80)
+            int total = ((pbl + ds + os + em3) / 400) * 100;
+            if (total <= 100 && total > 80)
                 return "A";
-            else if(total<=80 && total>60)
+            else if (total <= 80 && total > 60)
                 return "B+";
-            else if(total<=60 && total>40)
+            else if (total <= 60 && total > 40)
                 return "B";
-            else if(total<=40 && total>20)//Logic Error in Question; Hence Improvised
+            else if (total <= 40 && total > 20)// Logic Error in Question; Hence Improvised
                 return "C";
             else
                 return "F";
@@ -59,23 +58,29 @@ class Marks {
     }
 }
 
-public class Student {
+public class Student implements Comparable<Student> {
     Scanner sc = new Scanner(System.in);
 
     public String name;
-    public double prn;
+    public int prn;
     public String dob;
     public String marks;
-    public double points;
-    public int temp;
+    public int points;
 
     Student() {
         this.name = "Testing";
-        this.prn = 101.101;
+        this.prn = 101;
         this.dob = "1/1/2027";
         this.marks = "T";
-        this.points = 101.101;
-        this.temp = (int)this.prn;
+        this.points = 101;
+    }
+
+    public Student(String name, int prn, String dob, String marks, int points) {
+        this.name = name;
+        this.prn = prn;
+        this.dob = dob;
+        this.marks = marks;
+        this.points = points;
     }
 
     public void getName() {
@@ -83,11 +88,12 @@ public class Student {
         System.out.print("Enter Name: ");
         this.name = sc.nextLine();
     }
+
     public void getPRN() {
         System.out.print("Enter PRN: ");
-        this.prn = sc.nextDouble();
-        this.temp = (int)prn;
+        this.prn = sc.nextInt();
     }
+
     public void getDOB() {
         System.out.println("-- Enter DOB Details --");
         int[] temp = new int[3];
@@ -101,26 +107,26 @@ public class Student {
         DOB dobj = new DOB(temp[0], temp[1], temp[2]);
         dob = dobj.printDOB();
     }
+
     public void getMarks() {
         System.out.println("-- Enter Marks (<=100 & >0) --");
-        double[] temp = new double[4];
+        int[] temp = new int[4];
         System.out.print("Enter PBL Marks: ");
-        temp[0] = sc.nextDouble();
+        temp[0] = sc.nextInt();
         System.out.print("Enter DS Marks: ");
-        temp[1] = sc.nextDouble();
+        temp[1] = sc.nextInt();
         System.out.print("Enter OS Marks: ");
-        temp[2] = sc.nextDouble();
+        temp[2] = sc.nextInt();
         System.out.print("Enter EM3 Marks: ");
-        temp[3] = sc.nextDouble();
+        temp[3] = sc.nextInt();
 
         Marks markObj = new Marks(temp[0], temp[1], temp[2], temp[3]);
         marks = markObj.grader();
-        points = (temp[0] + temp[1] + temp[2] + temp[3])/4;
+        points = (int)(temp[0] + temp[1] + temp[2] + temp[3]) / 4;
     }
-}
 
-class Sorter implements Comparator<Student> {
-    public int compare(Student a, Student b) {
-        return (a.temp - b.temp);
+    @Override
+    public int compareTo(Student o) {
+        return o.points - this.points;
     }
 }
