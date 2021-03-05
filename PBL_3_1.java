@@ -27,7 +27,6 @@ public class PBL_3_1 {
             System.out.println("3 - Search by Student Data");
             System.out.println("4 - Update Student Data");
             System.out.println("5 - Delete Student Data");
-            System.out.println("6 - Sorted Output");
             System.out.print("Enter Choice Here: ");
             menuChoice = sc.nextInt();
 
@@ -48,7 +47,7 @@ public class PBL_3_1 {
                         System.out.println("| ----- Student Data ----- |");
                         Arrays.sort(stud);
                         for(int i = 0; i < studentCount; i++)
-                            System.out.println("Name: " + stud[i].name + " PRN: " + stud[i].prn + " DOB: " + stud[i].dob + " Marks: " + stud[i].marks);
+                            System.out.println(stud[i].toString());
                     }
                     else
                         System.out.println("No Student Data Present");
@@ -73,7 +72,7 @@ public class PBL_3_1 {
                                     if((stud[i].name).equals(name)) {
                                         found = 1;
                                         System.out.println("-- Student Found --");
-                                        System.out.println("Name: " + stud[i].name + " PRN: " + stud[i].prn + " DOB: " + stud[i].dob + " Marks: " + stud[i].marks);
+                                        System.out.println(stud[i].toString());
                                     }
                                 }
                                 if (found == 0)
@@ -87,7 +86,7 @@ public class PBL_3_1 {
                                     if(stud[i].prn == prn) {
                                         found = 1;
                                         System.out.println("-- Student Found --");
-                                        System.out.println("Name: " + stud[i].name + " PRN: " + stud[i].prn + " DOB: " + stud[i].dob + " Marks: " + stud[i].marks);
+                                        System.out.println(stud[i].toString());
                                     }
                                 }
                                 if (found == 0)
@@ -98,7 +97,7 @@ public class PBL_3_1 {
                                 System.out.print("Enter Position: ");
                                 pos = sc.nextInt();
                                 if (pos <= studentCount) {
-                                    System.out.println("Name: " + stud[pos].name + " PRN: " + String.format("%.0f", stud[pos].prn) + " DOB: " + stud[pos].dob + " Marks: " + stud[pos].marks);
+                                    System.out.println(stud[pos].toString());
                                 }
                                 break;
                             default:
@@ -113,7 +112,7 @@ public class PBL_3_1 {
                     if (studentCount > 0) {
                         System.out.println("| ----- Student Data ----- |");
                         for(int i = 0; i < studentCount; i++)
-                            System.out.println(i + " -> " + "Name: " + stud[i].name + " PRN: " + stud[i].prn + " DOB: " + stud[i].dob + " Marks: " + stud[i].marks);
+                            System.out.println(i + " -> " + stud[i].toString());
                         int rec;
                         int recField;
                         System.out.print("Enter Record no. to be Updated: ");
@@ -150,7 +149,7 @@ public class PBL_3_1 {
                     if (studentCount > 0) {
                         System.out.println("| ----- Student Data ----- |");
                         for(int i = 0; i < studentCount; i++)
-                            System.out.println(i + " -> " + "Name: " + stud[i].name + " PRN: " + stud[i].prn + " DOB: " + stud[i].dob + " Marks: " + stud[i].marks);
+                            System.out.println(i + " -> " + stud[i].toString());
                         int rec;
                         System.out.print("Enter Record no. to be Deleted: ");
                         rec = sc.nextInt();

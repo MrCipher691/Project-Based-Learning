@@ -70,9 +70,9 @@ public class Student implements Comparable<Student> {
     Student() {
         this.name = "Testing";
         this.prn = 101;
-        this.dob = "1/1/2027";
+        this.dob = "2/7/2027";
         this.marks = "T";
-        this.points = 101;
+        this.points = 100;
     }
 
     public Student(String name, int prn, String dob, String marks, int points) {
@@ -128,5 +128,10 @@ public class Student implements Comparable<Student> {
     @Override
     public int compareTo(Student o) {
         return o.points - this.points;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Name: %1$10s\tPRN: %2$4d\tDOB: %3$10s\tMarks: %4$s", name, prn, dob, marks);
     }
 }
