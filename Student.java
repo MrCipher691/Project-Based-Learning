@@ -43,7 +43,7 @@ class Marks {
         if (pbl < 0 || pbl > 100 || ds < 0 || ds > 100 || os < 0 || os > 100 || em3 < 0 || em3 > 100)
             return "Invalid Value Entered";
         else {
-            int total = ((pbl + ds + os + em3) / 400) * 100;
+            int total = (int)((pbl + ds + os + em3) / 4);
             if (total <= 100 && total > 80)
                 return "A";
             else if (total <= 80 && total > 60)
@@ -72,7 +72,7 @@ public class Student implements Comparable<Student> {
         this.prn = 101;
         this.dob = "2/7/2027";
         this.marks = "T";
-        this.points = 100;
+        this.points = 0;
     }
 
     public Student(String name, int prn, String dob, String marks, int points) {

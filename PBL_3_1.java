@@ -4,20 +4,20 @@ import java.util.Scanner;
 public class PBL_3_1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int noOfStudents = 5;
-        int studentCount = 5;
+        int noOfStudents = 0;
+        int studentCount = 0;
         int contiue = 1;
 
         System.out.print("Enter Total no of Students: ");
         noOfStudents = sc.nextInt();
         Student[] stud = new Student[noOfStudents];
-        stud[0] = new Student("Tom", 41, "16/1/2002", "A", 92);
-        stud[1] = new Student("Strange", 40, "11/12/2023", "C", 23);
-        stud[2] = new Student("Clint", 53, "15/10/2002", "F", 2);
-        stud[3] = new Student("Hans", 21, "1/1/2027", "B", 42);
-        stud[4] = new Student("Zimmer", 67, "18/4/2001", "A", 98);
-        //for(int i = 0; i < noOfStudents; i++)
-        //    stud[i] = new Student();
+        //stud[0] = new Student("Tom", 41, "16/1/2002", "A", 92);
+        //stud[1] = new Student("Strange", 40, "11/12/2023", "C", 23);
+        //stud[2] = new Student("Clint", 53, "15/10/2002", "F", 2);
+        //stud[3] = new Student("Hans", 21, "1/1/2027", "B", 42);
+        //stud[4] = new Student("Zimmer", 67, "18/4/2001", "A", 98);
+        for(int i = 0; i < noOfStudents; i++)
+            stud[i] = new Student();
 
         do{
             int menuChoice;

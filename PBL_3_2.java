@@ -13,11 +13,11 @@ public class PBL_3_2 {
         int cond = 1;
         Vector <Employee> emp = new Vector<Employee>();
 
-        emp.add(new Employee(40, 40000, "Tim", "M", "Dev", "TCS"));
-        emp.add(new Employee(41, 63240, "Harry", "M", "Designer", "AT&T"));
-        emp.add(new Employee(42, 76000, "Charles", "M", "Manager", "Lenovo"));
-        emp.add(new Employee(43, 60340, "Leo", "M", "HR", "Tata"));
-        emp.add(new Employee(44, 63200, "Mathew", "M", "Editor", "Forbes"));
+        //emp.add(new Employee(40, 40000, "Tim", "M", "Dev", "TCS"));
+        //emp.add(new Employee(41, 63240, "Harry", "M", "Designer", "AT&T"));
+        //emp.add(new Employee(42, 76000, "Charles", "M", "Manager", "Lenovo"));
+        //emp.add(new Employee(43, 60340, "Leo", "M", "HR", "Tata"));
+        //emp.add(new Employee(44, 63200, "Mathew", "M", "Editor", "Forbes"));
 
         do{
             int menu;
