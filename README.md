@@ -89,3 +89,17 @@ There are 52 cards in a deck, each of which belongs to one of four suits and one
     * findCard() which searches through an array of Cards to see whether it contains a certain card
     * dealCards() function: To print 5 random cards from the existing deck. (1 pt)
 * Illustrate the use of Garbage Collection in java by including suitable code (1 pt)
+
+## Assignment 5
+
+### Part 2 - PBL_5_2.java, Account.java, savingAcc.java & accDetail.java
+
+Program to implement multilevel inheritance. Create class Account with cust_name and account_number as instance variables and write getdata and putData()  methods which will take customer name and account number and will display the same using putData method. Create another class savingAcc that extends class Account with min_balance and sav_bal as instance variables and getdata() and putData() method to take instance variables as well as call base class methods in respective getData and putData methods. Create another class accdetail with deposits and withdrawal as instance variables, getdata() and putData() method to take instance variables as well as call base class methods in respective getData and putData methods.Create separate class accountInfo which will create object of accdetail and its respective methods to get and display information.
+
+The main part of program contains the following features:
+
+* Creating Account
+* Deleting Account
+* Set Minimum Balance for an Account
+* Deposit Money into Account
+* Withdraw Money from Account

@@ -29,7 +29,7 @@ public class PBL_5_2 {
             boolean flag = false;
             String cust_name;
             int account_number;
-            double min_balance, sav_balance, deposit, withdrawal;
+            double min_balance, deposit, withdrawal;
 
             System.out.println("\n| ---- MENU ---- |");
             System.out.println("1 - Create Account");
@@ -110,7 +110,7 @@ public class PBL_5_2 {
                                     //Checks if account number exists
                                     for (int i = 0; i < cust.size(); i++) {
                                         //If yes, that record is deleted
-                                        if (tbd == cust.get(i).getAccount_number()) {
+                                        if ((cust_name.toLowerCase()).equals(cust.get(i).getCust_name().toLowerCase()) && tbd == cust.get(i).getAccount_number()) {
                                             cust.remove(i);
                                             flag = true;
                                             System.out.println("CUSTOMER RECORD DELETED SUCCESSFULLY");
@@ -301,10 +301,7 @@ public class PBL_5_2 {
                         System.out.println("! WE DO NOT HAVE CUSTOMERS !");
                     break;
                 default:
-                    min_balance = sav_balance = deposit = withdrawal = 0.0;
-                    System.out.println(min_balance+sav_balance+deposit+withdrawal);
                     exit = true;
-                    display(cust);
                     break;
             }
         } while (exit == false);
