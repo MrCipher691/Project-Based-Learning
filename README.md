@@ -117,3 +117,13 @@ Program to implement the following Multiple Inheritance.
 <p align="center">
 <img src="https://drive.google.com/uc?export=view&id=1L9g6UBripYWnORzijMqN-UBi_dveUjWK">
 </p>
+
+### Part 2 - DIRECTORY/PACKAGE PBL_6_2
+
+An implementation of IntStack (integer stack) that uses fixed storage as well as "growable" using	interface.
+
+<p align="center">
+<img src="https://drive.google.com/uc?export=view&id=1SxwOhdD3toLukcEMQqpJL86DOG1zTkIQ">
+</p>
+
+Create a user defined package “pkg_Stack” where the interface is stored. The other two complete classes will need to import the package ‘pkg_Stack’ and then use it.
