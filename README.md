@@ -127,3 +127,65 @@ An implementation of IntStack (integer stack) that uses fixed storage as well as
 </p>
 
 Create a user defined package “pkg_Stack” where the interface is stored. The other two complete classes will need to import the package ‘pkg_Stack’ and then use it.
+
+## Assignment 7
+
+### Part 1 - PBL_7_1.java
+
+A rational number is a number in the form of a/b where a and b are integers and b != 0. Rational numbers can be added, subtracted, multiplied, and divided. Write a Java application that will be able to add, subtract, multiply, divide, compare, convert to floating point, and find absolute value for rational numbers.  
+
+Your program should be written in Object Oriented Programming style. The program should accept two rational numbers from the user using any method and output results of operations to console. Your program should solve operations efficiently and be able to recover from bad inputs. Use exception handling mechanism so as not to crash the program. 
+
+Example Inputs:  
+
+1234 / 5678 and 8765 / 4321 
+
+0 / 1 and 34 / 675 
+
+apple / 23   and  23 / 0
+
+### Part 2 - PBL_7_2.java
+
+Program to find the factorial of ‘n’ integers (as command line arguments CLA). Write your own exception “MyExcep” to validate integer values to be in certain range. 
+
+Sample call: java ExceptionDemo 8 – 6 14 abcd 5 
+
+Static main method invokes another method “factorial()” 
+
+CLA which are strings but interpreted as integer values. 
+
+The user-defined exception class MyExcep should have proper constructors / overridden toString() method to display exception message along with the wrong input number that had generated the exception. 
+
+NumberFormatException and Your Exception class MyExcep( n<0 and n>12 ) 
+
+## Assignment 8 - PBL_8.java
+
+Create a Java Program for MySQL database connectivity. Perform following operations  
+
+Create a table Employee with fields empno (int),ename(string),department(string) ,job(string) and salary(float). 
+
+Add five employees to the Employee table at the time of table creation 
+
+* EMPNO:8369, Ename:Smith, job:Manager, department:IT,Sal:80000.00 
+
+* EMPNO:8654, Ename:Momin, job:Salesman, department:Sales ,Sal:12050.00 
+
+* EMPNO:8839, Ename: Amir, department: Sales, job: President ,Sal:150000.00 
+
+* EMPNO:8934, Ename:Mita, department:HR ,job:Clerk, Sal:23000.00 
+
+* EMPNO:8900, Ename:Jatin, department:HR job:Clerk, Sal:25050.00 
+
+Add new employee using Java program. 
+
+Display all employees. 
+
+Search a particular employee by using Name. 
+
+Update employee salary using empno. 
+
+Delete employee using empno. 
+
+Exit 
+
+<b>Empno will be PRIMARY KEY</b>
